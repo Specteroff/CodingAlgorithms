@@ -5,11 +5,13 @@ int main() {
 	std::string dec1;
 	std::getline(std::cin, dec1);
 	if (dec1 == "1") {
+		std::cout << "Enter string:";
 		std::string str;
 		std::getline(std::cin, str);
 		std::cout << Coding::EliasGammaCodeAlgorithm(str);
 	}
 	if (dec1 == "2") {
+		std::cout << "Enter string:";
 		std::string str;
 		std::getline(std::cin, str);
 		std::cout << Coding::HammingAlgorithm(str);
