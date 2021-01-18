@@ -60,18 +60,23 @@ int main() {
 		if (dec2 == "1") {
 			std::cout << "Enter string:(Doesn't work with Russian yet)";
 			std::string str;
+			for (int i = 0;i < str.length();++i) {
+				str[i] = unsigned(str[i]);
+			}
+			std::getline(std::cin, str);
 			std::getline(std::cin, str);
 			std::cout << Coding::EncodeBase64(str);
 		}
 		else if (dec2 == "2") {
 			std::cout << "Enter string:";
 			std::string str;
-			std::getline(std::cin, str);
 			std::cout << Coding::DecodeBase64(str);
 		}
 		else {
 			std::cout << "Incorrect input";
 		}
 	}
+	std::cout << std::endl;
+	system("pause");
 }
 
